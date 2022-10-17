@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="payment-service" />
+        <module name="customer-service" />
+        <module name="deliveryservice" />
+        <module name="product-service" />
+        <module name="order-service" />
+        <module name="account-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="account-service" target="11" />
+      <module name="api-gateway" target="1.5" />
+      <module name="customer-service" target="10" />
+      <module name="deliveryservice" target="11" />
+      <module name="order-service" target="11" />
+      <module name="payment-service" target="16" />
+      <module name="product-service" target="16" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="account-service" options="-parameters" />
+      <module name="customer-service" options="-parameters" />
+      <module name="deliveryservice" options="-parameters" />
+      <module name="order-service" options="-parameters --add-modules java.base" />
+      <module name="payment-service" options="-parameters --add-modules java.base" />
+      <module name="product-service" options="-parameters --add-modules java.base" />
+    </option>
+  </component>
+</project>
